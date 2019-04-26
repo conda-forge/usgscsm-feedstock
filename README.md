@@ -18,7 +18,7 @@ Current build status
 
 
 <table>
-
+    
   <tr>
     <td>Azure</td>
     <td>
@@ -56,6 +56,7 @@ Current build status
       <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
     </td>
   </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info
@@ -151,4 +152,4 @@ Feedstock Maintainers
 =====================
 
 * [@jlaura](https://github.com/jlaura/)
-* [@jessemapel](https://github.com/jessemapel/)
+
