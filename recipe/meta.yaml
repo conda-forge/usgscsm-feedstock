@@ -26,7 +26,7 @@ requirements:
 test:
   commands:
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - test -e $PREFIX/lib/libusgscsm${SHLIB_EXT}  # [unix]    
+    - test -e $PREFIX/lib/libusgscsm${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\usgscsm.dll exit 1  # [win]
 
 about:
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - jlaura
+    - jessemapel
