@@ -1,16 +1,15 @@
 mkdir build
 cd build
-cmake -G "NMake Makefiles" ^
+cmake -G "Visual Studio 15 2017 Win64" ^
     -D CMAKE_BUILD_TYPE=Release ^
-    -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^ 
+    -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -D CMAKE_PREFIX_PATH=%PREFIX% ^
     -D BUILD_CSM=OFF  ^
-    -D BUILD_TESTS=OFF
+    -D BUILD_TESTS=OFF  ^
+    -D USGSCSM_EXTERNAL_DEPS=ON
      %SRC_DIR%
 if errorlevel 1 exit 1
 
-nmake
-if errorlevel 1 exit 1
-
-nmake install
+cmake --build . --target ALL_BUILD --config Release
+copy Release\usgscsm.dll %LIBRARY_BIN%
 if errorlevel 1 exit 1

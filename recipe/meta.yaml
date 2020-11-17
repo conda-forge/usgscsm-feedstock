@@ -19,8 +19,12 @@ requirements:
     - cmake >=3.10
   host:
     - csm
+    - ale
+    - nlohmann_json
     - vc  # [win]
   run:
+    - ale
+    - nlohmann_json
     - csm
 
 test:
