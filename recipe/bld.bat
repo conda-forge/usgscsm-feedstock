@@ -4,8 +4,7 @@ cmake -G "Visual Studio 15 2017 Win64" ^
     -D CMAKE_BUILD_TYPE=Release ^
     -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -D CMAKE_PREFIX_PATH=%PREFIX% ^
-    -D BUILD_CSM=OFF  ^
-    -D BUILD_TESTS=OFF  ^
+    -D USGSCSM_BUILD_TESTS=OFF  ^
     -D USGSCSM_EXTERNAL_DEPS=ON
      %SRC_DIR%
 if errorlevel 1 exit 1
