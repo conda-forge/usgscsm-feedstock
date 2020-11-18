@@ -3,7 +3,7 @@ About usgscsm
 
 Home: http://github.com/USGS-Astrogeology/usgscsm
 
-Package license: Public Domain
+Package license: Unlicense
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/usgscsm-feedstock/blob/master/LICENSE.txt)
 
