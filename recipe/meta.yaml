@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 057fdd9e51994b54a1836e8cbbab19868814bf5e6ef07e90af81607da759c23e
+  sha256: 1fbab354ca400841aa3e3e29cf223eeca27d27d195606b1fa28c7fdbb69f47ae
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -19,8 +19,12 @@ requirements:
     - cmake >=3.10
   host:
     - csm
+    - ale
+    - nlohmann_json
     - vc  # [win]
   run:
+    - ale
+    - nlohmann_json
     - csm
 
 test:
@@ -31,9 +35,9 @@ test:
 
 about:
   home: http://github.com/USGS-Astrogeology/usgscsm
-  license: Public Domain
+  license: Unlicense
   license_file: license.txt
-  summary: 'USGS Astrogeolgoy developed Community Sensor Model implementations'
+  summary: USGS Astrogeolgoy developed Community Sensor Model implementations
 
   description: |
     The USGS Astrogeology CSM compliant sensor models for surface planetary
