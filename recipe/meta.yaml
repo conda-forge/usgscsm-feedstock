@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 988f6d8e3b40721cd9490b8fc8620244dbd1135e60d1825558ebd39a2726d437
+  sha256: c43825ffb7a08da3c436650dff20880c9240cab606a0bd3c9cf0d7f962431ba9
 
 build:
   number: 0
