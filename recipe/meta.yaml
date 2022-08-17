@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "1.5.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: c43825ffb7a08da3c436650dff20880c9240cab606a0bd3c9cf0d7f962431ba9
+  sha256: 47803260539af68799738fb7a43aff321d02d7768e724dc8063ecdfef5633920
 
 build:
   number: 0
@@ -17,15 +17,18 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake >=3.10
+    - make
   host:
     - csm
     - ale
     - nlohmann_json
+    - eigen
     - vc  # [win]
   run:
     - ale
     - nlohmann_json
     - csm
+    - eigen
 
 test:
   commands:
@@ -34,8 +37,8 @@ test:
 
 about:
   home: http://github.com/USGS-Astrogeology/usgscsm
-  license: Unlicense
-  license_file: license.txt
+  license: CC0-1.0
+  license_file: LICENSE.md
   summary: USGS Astrogeolgoy developed Community Sensor Model implementations
 
   description: |
