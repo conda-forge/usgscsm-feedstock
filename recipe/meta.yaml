@@ -37,8 +37,8 @@ test:
 
 about:
   home: http://github.com/USGS-Astrogeology/usgscsm
-  license: Unlicense
-  license_file: license.txt
+  license: CC-1.0
+  license_file: LICENSE.md
   summary: USGS Astrogeolgoy developed Community Sensor Model implementations
 
   description: |
