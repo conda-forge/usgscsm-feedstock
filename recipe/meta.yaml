@@ -17,15 +17,18 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake >=3.10
+    - make
   host:
     - csm
     - ale
     - nlohmann_json
+    - eigen
     - vc  # [win]
   run:
     - ale
     - nlohmann_json
     - csm
+    - eigen
 
 test:
   commands:
