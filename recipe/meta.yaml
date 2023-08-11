@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 47803260539af68799738fb7a43aff321d02d7768e724dc8063ecdfef5633920
+  sha256: 4a60490399c44de5818e4ae49cd941b03b42cf78464fa84fb0a8ed35f52603c5
   patches:
     - patches/0001-Fixing-json-version-ABI.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
