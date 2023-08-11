@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 4a60490399c44de5818e4ae49cd941b03b42cf78464fa84fb0a8ed35f52603c5
-  patches:
-    - patches/0001-Fixing-json-version-ABI.patch
 
 build:
   number: 1
