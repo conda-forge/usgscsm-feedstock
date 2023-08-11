@@ -177,4 +177,5 @@ Feedstock Maintainers
 
 * [@jessemapel](https://github.com/jessemapel/)
 * [@jlaura](https://github.com/jlaura/)
+* [@acpaquette](https://github.com/acpaquette/)
 
