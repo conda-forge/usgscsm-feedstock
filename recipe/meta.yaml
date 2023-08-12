@@ -7,10 +7,8 @@ package:
 
 source:
   url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 47803260539af68799738fb7a43aff321d02d7768e724dc8063ecdfef5633920
-  patches:
-    - patches/0001-Fixing-json-version-ABI.patch
-
+  sha256: 8ecaba0945e62f3b89aba8b117338106e0079b04c73cd28152102689ef9c8368
+    
 build:
   number: 1
   skip: true  # [win]
@@ -26,11 +24,13 @@ requirements:
     - nlohmann_json
     - eigen
     - vc  # [win]
+    - proj
   run:
     - ale
     - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
     - csm
     - eigen
+    - proj
 
 test:
   commands:
@@ -52,3 +52,4 @@ extra:
   recipe-maintainers:
     - jlaura
     - jessemapel
+    - acpaquette
