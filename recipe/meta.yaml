@@ -24,13 +24,13 @@ requirements:
     - nlohmann_json
     - eigen
     - vc  # [win]
-    - proj
+    - proj=9.1.0
   run:
     - ale
     - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
     - csm
     - eigen
-    - proj
+    - {{ pin_compatible('proj', min_pin='x.x', max_pin='x.x') }}
 
 test:
   commands:
