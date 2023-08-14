@@ -10,7 +10,7 @@ source:
   sha256: 4a60490399c44de5818e4ae49cd941b03b42cf78464fa84fb0a8ed35f52603c5
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
     - nlohmann_json
     - eigen
     - vc  # [win]
-    - proj=9.1.0
+    - proj =9.1.0
   run:
     - ale
     - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
