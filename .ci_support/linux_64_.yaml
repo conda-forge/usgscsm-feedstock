@@ -10,7 +10,5 @@ cxx_compiler_version:
 - '12'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
-proj:
-- 9.2.1
 target_platform:
 - linux-64

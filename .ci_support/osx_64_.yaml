@@ -7,10 +7,8 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '15'
+- '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-proj:
-- 9.2.1
 target_platform:
 - osx-64
