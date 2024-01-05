@@ -14,6 +14,9 @@ source:
   - folder: ale
     url: https://github.com/DOI-USGS/ale/archive/a7d8a148f54d5141c63ed45a24a71c890ca11de7.zip
     sha256: d2cecca296de5c44245f0471cf5a3e835fb4792cc9fba24ab9f29822dc67338f
+  - folder: ale/eigen
+    url: https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
+    sha256: 8586084f71f9bde545ee7fa6d00288b264a2b7ac3607b974e54d13e7162c1c72
   - folder: ale/json
     url: https://github.com/nlohmann/json/archive/c6b298799aca23f2b35fc52c1df393afede20c15.zip
     sha256: 21370dcff5ffb3e58b28f3f2d64a828cbb708cc632231ead9a7184988a0e563c
