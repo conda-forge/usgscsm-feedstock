@@ -1,16 +1,17 @@
 {% set name = "usgscsm" %}
-{% set version = "1.7.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USGS-Astrogeology/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 4a60490399c44de5818e4ae49cd941b03b42cf78464fa84fb0a8ed35f52603c5
+  - folder: .
+    url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
+    sha256: a8ae036caa0b958fa6e28ee8ba7a29c2b6fefeb1413144243d59521f51d1dc12
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -34,22 +35,23 @@ requirements:
 
 test:
   commands:
-    - test -e $PREFIX/lib/libusgscsm${SHLIB_EXT}  # [unix]
+    - test -e $PREFIX/lib/csmplugins/libusgscsm${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\usgscsm.dll exit 1  # [win]
 
 about:
-  home: http://github.com/USGS-Astrogeology/usgscsm
+  home: http://github.com/DOI-USGS/usgscsm
   license: CC0-1.0
   license_file: LICENSE.md
-  summary: USGS Astrogeolgoy developed Community Sensor Model implementations
+  summary: USGS Astrogeology developed Community Sensor Model implementations
 
   description: |
     The USGS Astrogeology CSM compliant sensor models for surface planetary
     science applications.
-  dev_url: https://github.com/USGS-Astrogeology/usgscsm
+  dev_url: https://github.com/DOI-USGS/usgscsm
 
 extra:
   recipe-maintainers:
     - jlaura
-    - jessemapel
     - acpaquette
+    - chkim-usgs
+    - Kelvinrr

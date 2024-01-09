@@ -3,13 +3,13 @@ About usgscsm-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/usgscsm-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/USGS-Astrogeology/usgscsm
+Home: http://github.com/DOI-USGS/usgscsm
 
 Package license: CC0-1.0
 
-Summary: USGS Astrogeolgoy developed Community Sensor Model implementations
+Summary: USGS Astrogeology developed Community Sensor Model implementations
 
-Development: https://github.com/USGS-Astrogeology/usgscsm
+Development: https://github.com/DOI-USGS/usgscsm
 
 The USGS Astrogeology CSM compliant sensor models for surface planetary
 science applications.
@@ -127,7 +127,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -175,7 +175,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Kelvinrr](https://github.com/Kelvinrr/)
 * [@acpaquette](https://github.com/acpaquette/)
-* [@jessemapel](https://github.com/jessemapel/)
+* [@chkim-usgs](https://github.com/chkim-usgs/)
 * [@jlaura](https://github.com/jlaura/)
 
