@@ -9,26 +9,6 @@ source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
     sha256: a8ae036caa0b958fa6e28ee8ba7a29c2b6fefeb1413144243d59521f51d1dc12
-  
-  # submodules
-  - folder: ale
-    url: https://github.com/DOI-USGS/ale/archive/a7d8a148f54d5141c63ed45a24a71c890ca11de7.zip
-    sha256: d2cecca296de5c44245f0471cf5a3e835fb4792cc9fba24ab9f29822dc67338f
-  - folder: ale/eigen
-    url: https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
-    sha256: 8586084f71f9bde545ee7fa6d00288b264a2b7ac3607b974e54d13e7162c1c72
-  - folder: ale/json
-    url: https://github.com/nlohmann/json/archive/c6b298799aca23f2b35fc52c1df393afede20c15.zip
-    sha256: 21370dcff5ffb3e58b28f3f2d64a828cbb708cc632231ead9a7184988a0e563c
-  - folder: csm
-    url: https://github.com/USGS-Astrogeology/csm/archive/c78dbba3731432249a75db9fdd7415b292d46715.zip
-    sha256: e3eb35fbc27df94d6432c66a93b1dd140a9e93d6897c9107d5a99ab0557e99ea
-  - folder: gtest
-    url: https://github.com/google/googletest/archive/aee0f9d9b5b87796ee8a0ab26b7587ec30e8858e.zip
-    sha256: 04a1751f94244307cebe695a69cc945f9387a80b0ef1af21394a490697c5c895
-  - folder: json
-    url: https://github.com/nlohmann/json/archive/1a521cbd3657eea6ba90cded2aecca93e3cd78d4.zip
-    sha256: 3bc24b2490e91285b66211d3763bb8db3d3fd447f24ae35d82279fcafa60e3d5
 
 build:
   number: 0
@@ -61,13 +41,7 @@ test:
 about:
   home: http://github.com/DOI-USGS/usgscsm
   license: CC0-1.0
-  license_file: 
-    - LICENSE.md
-    - ale/json/LICENSE.MIT
-    - ale/LICENSE.md
-    - csm/LICENSE
-    - gtest/LICENSE
-    - json/LICENSE.MIT
+  license_file: LICENSE.md
   summary: USGS Astrogeology developed Community Sensor Model implementations
 
   description: |
