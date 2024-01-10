@@ -25,7 +25,7 @@ requirements:
     - nlohmann_json
     - eigen
     - vc  # [win]
-    - proj =9.1.0
+    - proj =9.3.0
   run:
     - ale
     - {{ pin_compatible('nlohmann_json', min_pin='x.x', max_pin='x.x') }}
