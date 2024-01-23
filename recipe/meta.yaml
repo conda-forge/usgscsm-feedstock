@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: a8ae036caa0b958fa6e28ee8ba7a29c2b6fefeb1413144243d59521f51d1dc12
+    sha256: 2f2b49fc74b6f2eef92839737315be7585b81331d78592bffdf04e31611e8eaf
 
 build:
   number: 0
