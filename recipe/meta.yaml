@@ -13,7 +13,7 @@ source:
   # submodules
   - folder: ale
     url: https://github.com/DOI-USGS/ale/archive/0.10.0.zip
-    sha256: d2cecca296de5c44245f0471cf5a3e835fb4792cc9fba24ab9f29822dc67338f
+    sha256: 2373e0e1ff3715adef60e61db22e6cea1d5b7941f5b1999dd202065d3d84efb2
   - folder: csm
     url: https://github.com/USGS-Astrogeology/csm/archive/c78dbba3731432249a75db9fdd7415b292d46715.zip
     sha256: e3eb35fbc27df94d6432c66a93b1dd140a9e93d6897c9107d5a99ab0557e99ea
