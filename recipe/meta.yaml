@@ -21,8 +21,8 @@ source:
     url: https://github.com/google/googletest/archive/aee0f9d9b5b87796ee8a0ab26b7587ec30e8858e.zip
     sha256: 04a1751f94244307cebe695a69cc945f9387a80b0ef1af21394a490697c5c895
   - folder: json
-    url: https://github.com/nlohmann/json/archive/1a521cbd3657eea6ba90cded2aecca93e3cd78d4.zip
-    sha256: 3bc24b2490e91285b66211d3763bb8db3d3fd447f24ae35d82279fcafa60e3d5
+    url: https://github.com/nlohmann/json/archive/refs/tags/v3.8.0.zip
+    sha256: 83947cb78d50990b4b931b8dbc8632781bc601baa45b75ece0899c7b98d86c0b
   - folder: ale/eigen
     url: https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip
     sha256: 1ccaabbfe870f60af3d6a519c53e09f3dcf630207321dffa553564a8e75c4fc8
