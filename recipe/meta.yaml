@@ -28,7 +28,7 @@ source:
     sha256: 1ccaabbfe870f60af3d6a519c53e09f3dcf630207321dffa553564a8e75c4fc8
   - folder: PROJ
     url: https://github.com/OSGeo/PROJ/archive/9.3.1.zip
-    sha256: f652ceb9a9b7e6c58b2d534d96b1e5dfb49b1781bd65d9a2a7b08329582a0b97
+    sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
   number: 0
