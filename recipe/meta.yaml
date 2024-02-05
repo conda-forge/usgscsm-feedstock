@@ -8,7 +8,7 @@ package:
 source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 2f2b49fc74b6f2eef92839737315be7585b81331d78592bffdf04e31611e8eaf
+    sha256: 8441c4a5915c71b9ef1e4a8bb3d867a5ebb14294ba4c1a3cd6968e6debebda46
 
   # submodules
   - folder: ale
