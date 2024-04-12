@@ -13,6 +13,6 @@ cmake -G "NMake Makefiles" ^
 
 if errorlevel 1 exit 1
 
-cmake --build . --target ALL_BUILD --config Release
+cmake --build . --config Release
 copy Release\usgscsm.dll %LIBRARY_BIN%
 if errorlevel 1 exit 1
