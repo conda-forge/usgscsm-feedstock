@@ -8,7 +8,7 @@ cmake -G "Visual Studio 15 2017 Win64" ^
     -D USGSCSM_BUILD_TESTS=OFF  ^
     -D USGSCSM_BUILD_DOCS=OFF  ^
     -D ALE_BUILD_DOCS=OFF  ^
-    -D USGSCSM_EXTERNAL_DEPS=OFF ^ 
+    -D USGSCSM_EXTERNAL_DEPS=OFF ^
      "%SRC_DIR%"
 
 if errorlevel 1 exit 1
