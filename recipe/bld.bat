@@ -1,7 +1,7 @@
 mkdir build
 cd build
 
-cmake -G "Visual Studio 15 2017 Win64" ^
+cmake -G "Make" ^
     -D CMAKE_BUILD_TYPE=Release ^
     -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -D CMAKE_PREFIX_PATH=%PREFIX% ^
