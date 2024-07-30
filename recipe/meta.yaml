@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 8441c4a5915c71b9ef1e4a8bb3d867a5ebb14294ba4c1a3cd6968e6debebda46
+    sha256: 076cb97e59cd3fff86447d91572397d9cca04290e3a36d44844b0978306451e3
 
   # submodules
   - folder: ale
@@ -31,12 +31,13 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake >=3.10
     - make
     - nlohmann_json
