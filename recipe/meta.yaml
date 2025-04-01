@@ -36,18 +36,19 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - {{ compiler('cxx') }} # [not 'osx-arm64']
+#   - {{ stdlib("c") }} # this fails on both linux and osx-arm64
+    - clang >=16,<17 # ['osx-arm64']
     - cmake >=3.10
     - make
     - nlohmann_json
     - eigen
     - sqlite
   host:
-    - csm
+    - csm # [not 'osx-arm64']
     - vc  # [win]
   run:
-    - csm
+    - csm # [not 'osx-arm64']
 
 test:
   commands:
