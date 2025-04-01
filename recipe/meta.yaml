@@ -42,14 +42,9 @@ requirements:
     - {{ stdlib("c") }}
     - cmake >=3.10
     - make
-    - nlohmann_json
-    - eigen
     - sqlite
   host:
-    - csm
     - vc  # [win]
-  run:
-    - csm
 
 test:
   commands:
