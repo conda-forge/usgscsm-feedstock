@@ -40,7 +40,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - cmake >=3.10, <3.4
+    - cmake >=3.10, <4.0.0
     - make
   host:
     - vc  # [win]
