@@ -37,7 +37,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}  # [not 'osx-arm64']
-#   - {{ stdlib("c") }}  # this fails on both linux and osx-arm64
+    - {{ stdlib("c") }}  # this fails in a local build both linux and osx-arm64
     - clang >=16,<17  # ['osx-arm64']
     - cmake >=3.10
     - make
