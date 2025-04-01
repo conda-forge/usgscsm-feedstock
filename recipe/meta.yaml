@@ -42,7 +42,6 @@ requirements:
     - {{ stdlib("c") }}
     - cmake >=3.10
     - make
-    - sqlite=3.46.0
   host:
     - vc  # [win]
 
