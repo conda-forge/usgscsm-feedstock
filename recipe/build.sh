@@ -1,6 +1,5 @@
 #!/bin/sh
 mkdir build && cd build
-ls $CONDA_PREFIX/lib/lib*qlite3*
 cmake ${CMAKE_ARGS}\
   -D CMAKE_BUILD_TYPE=Release\
   -D CMAKE_INSTALL_PREFIX=$PREFIX\
