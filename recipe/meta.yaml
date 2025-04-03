@@ -42,9 +42,9 @@ requirements:
     - {{ stdlib("c") }}
     - cmake >=3.10, <4.0.0
     - make
-    - sqlite                                 # [linux]
   host:
     - vc  # [win]
+    - sqlite  # [linux]
 
 test:
   commands:
