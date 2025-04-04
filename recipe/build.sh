@@ -1,6 +1,7 @@
 #!/bin/sh
 mkdir build && cd build
-cmake -D CMAKE_BUILD_TYPE=Release\
+cmake ${CMAKE_ARGS}\
+  -D CMAKE_BUILD_TYPE=Release\
   -D CMAKE_INSTALL_PREFIX=$PREFIX\
   -D CMAKE_PREFIX_PATH=$PREFIX \
   -D USGSCSM_BUILD_TESTS=OFF\
