@@ -31,12 +31,11 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
