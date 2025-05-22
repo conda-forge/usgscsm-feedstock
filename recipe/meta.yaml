@@ -42,11 +42,11 @@ requirements:
     - make
   host:
     - vc  # [win]
-    - sqlite >3.40,<3.50  # [linux]
+    - sqlite 3.46.0  # [linux]
 
   run:
     - vc  # [win]
-    - sqlite >3.40,<3.50  # [linux]
+    - sqlite 3.46.0  # [linux]
 
 test:
   commands:
