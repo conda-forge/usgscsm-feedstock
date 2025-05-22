@@ -31,7 +31,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
 
 requirements:
@@ -42,7 +42,11 @@ requirements:
     - make
   host:
     - vc  # [win]
-    - sqlite  # [linux]
+    - sqlite 3.46.0 # [linux]
+
+  run:
+    - vc  # [win]
+    - sqlite >3.40,<3.50 # [linux]
 
 test:
   commands:
