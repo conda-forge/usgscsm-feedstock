@@ -32,7 +32,6 @@ source:
 
 build:
   number: 4
-  skip: true  # [win]
 
 requirements:
   build:
