@@ -9,6 +9,8 @@ source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
     sha256: 076cb97e59cd3fff86447d91572397d9cca04290e3a36d44844b0978306451e3
+    patches:
+      - patches/0001-Updated-CXX-standard-to-17.patch
 
   # submodules
   - folder: ale
