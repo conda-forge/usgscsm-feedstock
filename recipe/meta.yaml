@@ -11,6 +11,7 @@ source:
     sha256: 076cb97e59cd3fff86447d91572397d9cca04290e3a36d44844b0978306451e3
     patches:
       - patches/0001-Update-spdlog.patch
+      - patches/0001-Add-custom-enum-formatters-for-spdlog.patch
 
   # submodules
   - folder: ale
