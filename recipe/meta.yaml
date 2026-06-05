@@ -34,7 +34,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 4
+  number: 5
 
 requirements:
   build:
@@ -42,6 +42,10 @@ requirements:
     - {{ stdlib("c") }}
     - cmake >=3.10,<4.0.0
     - make
+    # Native sqlite3 CLI to generate the vendored PROJ proj.db at build
+    # time. Needed for cross-compiled targets (e.g. osx_arm64) where the
+    # host sqlite3 cannot run on the build machine.
+    - sqlite 3.46.1
   host:
     - vc  # [win]
     - sqlite 3.46.1
