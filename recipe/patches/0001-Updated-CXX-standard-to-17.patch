@@ -1,0 +1,25 @@
+From d780f7cf22c6edf7bb91f50a36cdd057ea258ad8 Mon Sep 17 00:00:00 2001
+From: Adam Paquette <acpaquette@usgs.gov>
+Date: Tue, 31 Mar 2026 14:36:25 -0600
+Subject: [PATCH] Updated CXX standard to 17
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5b3b7f4..6999c77 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -7,7 +7,7 @@ message(STATUS "CMake Module Path: " ${CMAKE_MODULE_PATH})
+ 
+ include(GNUInstallDirs)
+ 
+-set(CMAKE_CXX_STANDARD 14)
++set(CMAKE_CXX_STANDARD 17)
+ 
+ # For dependencies minimum version
+ set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
+-- 
+2.50.1 (Apple Git-155)
+

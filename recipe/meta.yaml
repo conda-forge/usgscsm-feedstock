@@ -9,6 +9,9 @@ source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
     sha256: 076cb97e59cd3fff86447d91572397d9cca04290e3a36d44844b0978306451e3
+    patches:
+      - patches/0001-Update-spdlog.patch
+      - patches/0001-Add-custom-enum-formatters-for-spdlog.patch
 
   # submodules
   - folder: ale
@@ -31,8 +34,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 4
-  skip: true  # [win]
+  number: 5
 
 requirements:
   build:
@@ -40,13 +42,17 @@ requirements:
     - {{ stdlib("c") }}
     - cmake >=3.10,<4.0.0
     - make
+    # Native sqlite3 CLI to generate the vendored PROJ proj.db at build
+    # time. Needed for cross-compiled targets (e.g. osx_arm64) where the
+    # host sqlite3 cannot run on the build machine.
+    - sqlite 3.46.1
   host:
     - vc  # [win]
-    - sqlite 3.46.1  # [linux]
+    - sqlite 3.46.1
 
   run:
     - vc  # [win]
-    - sqlite 3.46.1  # [linux]
+    - sqlite 3.46.1
 
 test:
   commands:
