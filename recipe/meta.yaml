@@ -1,5 +1,5 @@
 {% set name = "usgscsm" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   - folder: .
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 076cb97e59cd3fff86447d91572397d9cca04290e3a36d44844b0978306451e3
+    sha256: 2e39b2762bcaf57539af3355b87c5d8bcd86d1399c9ab240e51aaa331f0e1ba8
     patches:
       - patches/0001-Update-spdlog.patch
       - patches/0001-Add-custom-enum-formatters-for-spdlog.patch
@@ -34,7 +34,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 5
+  number: 0
 
 requirements:
   build:
