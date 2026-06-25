@@ -1,15 +1,9 @@
-From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
-From: Claude (AI assistant) <noreply@anthropic.com>
-Date: Wed, 25 Jun 2026 00:00:00 +0000
-Subject: [PATCH] Remove stale spdlog install reference
+Remove stale spdlog install reference.
 
 usgscsm 2.1.0 dropped the vendored include/spdlog headers, but the 2.1.0
 CMakeLists.txt still lists that directory in USGSCSM_INSTALL_INCLUDE_DIRS,
-which breaks installation. This backports the upstream fix
-(DOI-USGS/usgscsm#513), which landed after the 2.1.0 tag.
----
- CMakeLists.txt | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+which breaks installation. Backport of upstream usgscsm PR 513, which
+landed after the 2.1.0 tag.
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 9a9b958..c469185 100644
