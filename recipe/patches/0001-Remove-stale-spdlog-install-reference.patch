@@ -1,0 +1,27 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Claude (AI assistant) <noreply@anthropic.com>
+Date: Wed, 25 Jun 2026 00:00:00 +0000
+Subject: [PATCH] Remove stale spdlog install reference
+
+usgscsm 2.1.0 dropped the vendored include/spdlog headers, but the 2.1.0
+CMakeLists.txt still lists that directory in USGSCSM_INSTALL_INCLUDE_DIRS,
+which breaks installation. This backports the upstream fix
+(DOI-USGS/usgscsm#513), which landed after the 2.1.0 tag.
+---
+ CMakeLists.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9a9b958..c469185 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -718,8 +718,7 @@ set(USGSCSM_INCLUDE_DIRS "${USGSCSM_INCLUDE_DIRS}"
+                          "${PROJ_INCLUDE_DIR}")
+ 
+ # These will be copied upon installation to ${CMAKE_INSTALL_INCLUDEDIR}/include
+-set(USGSCSM_INSTALL_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include/usgscsm"
+-                                 "${CMAKE_CURRENT_SOURCE_DIR}/include/spdlog")
++set(USGSCSM_INSTALL_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include/usgscsm")
+ 
+ target_include_directories(usgscsm
+                            PUBLIC

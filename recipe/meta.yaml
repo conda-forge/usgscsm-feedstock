@@ -10,8 +10,7 @@ source:
     url: https://github.com/DOI-USGS/{{ name }}/archive/{{ version }}.tar.gz
     sha256: 2e39b2762bcaf57539af3355b87c5d8bcd86d1399c9ab240e51aaa331f0e1ba8
     patches:
-      - patches/0001-Update-spdlog.patch
-      - patches/0001-Add-custom-enum-formatters-for-spdlog.patch
+      - patches/0001-Remove-stale-spdlog-install-reference.patch
 
   # submodules
   - folder: ale
