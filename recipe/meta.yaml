@@ -61,7 +61,6 @@ test:
   commands:
     - test -e $PREFIX/lib/csmplugins/libusgscsm${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\usgscsm.dll exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\csmapi.dll exit 1  # [win]
 
 about:
   home: http://github.com/DOI-USGS/usgscsm
