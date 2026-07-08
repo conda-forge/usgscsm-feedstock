@@ -46,13 +46,16 @@ requirements:
     # time. Needed for cross-compiled targets (e.g. osx_arm64) where the
     # host sqlite3 cannot run on the build machine.
     - sqlite 3.46.1
+    - csm
   host:
     - vc  # [win]
     - sqlite 3.46.1
+    - csm
 
   run:
     - vc  # [win]
     - sqlite 3.46.1
+    - csm
 
 test:
   commands:
