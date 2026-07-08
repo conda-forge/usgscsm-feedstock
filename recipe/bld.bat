@@ -15,5 +15,14 @@ cmake -G "Visual Studio 17 2022" ^
 if errorlevel 1 exit 1
 
 cmake --build . --target ALL_BUILD --config Release
-copy Release\usgscsm.dll %LIBRARY_BIN%
+if errorlevel 1 exit 1
+
+REM Install the full tree (libraries, headers, usgscsm_cam_test) the same way
+REM the Unix build does, rather than copying a single dll.
+cmake --install . --config Release
+if errorlevel 1 exit 1
+
+REM The vendored csm installs csmapi.dll under %LIBRARY_LIB%. Also place it on
+REM the dll search path so usgscsm.dll can load it at runtime.
+copy csm\Release\csmapi.dll %LIBRARY_BIN%
 if errorlevel 1 exit 1

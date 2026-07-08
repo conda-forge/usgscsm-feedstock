@@ -1,0 +1,26 @@
+Install the usgscsm library on Windows.
+
+The install rule tags the usgscsm target with the LIBRARY keyword only.
+On Windows a shared library splits into a RUNTIME artifact (the .dll) and
+an ARCHIVE artifact (the import .lib); LIBRARY covers neither, so the
+install target places nothing for usgscsm and the package ships without
+usgscsm.dll. Add RUNTIME and ARCHIVE destinations so the install target
+works on Windows. On Unix only the LIBRARY line applies, so behavior there
+is unchanged.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c469185..330026f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -748,7 +748,10 @@ target_link_libraries(usgscsm_cam_test
+     usgscsm
+     ${CSM_LIBRARY})
+ 
+-install(TARGETS usgscsm LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/csmplugins/)
++install(TARGETS usgscsm
++        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
++        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/csmplugins/
++        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+ install(DIRECTORY ${USGSCSM_INSTALL_INCLUDE_DIRS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+ install(TARGETS usgscsm_cam_test RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+ 

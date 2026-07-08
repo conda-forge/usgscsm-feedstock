@@ -11,6 +11,7 @@ source:
     sha256: 2e39b2762bcaf57539af3355b87c5d8bcd86d1399c9ab240e51aaa331f0e1ba8
     patches:
       - patches/0001-Remove-stale-spdlog-install-reference.patch
+      - patches/0002-Install-usgscsm-DLL-on-Windows.patch
 
   # submodules
   - folder: ale
@@ -33,7 +34,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -57,6 +58,7 @@ test:
   commands:
     - test -e $PREFIX/lib/csmplugins/libusgscsm${SHLIB_EXT}  # [unix]
     - if not exist %LIBRARY_BIN%\usgscsm.dll exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\csmapi.dll exit 1  # [win]
 
 about:
   home: http://github.com/DOI-USGS/usgscsm
