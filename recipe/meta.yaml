@@ -56,7 +56,7 @@ requirements:
   run:
     - vc  # [win]
     - sqlite 3.46.1
-    - csm
+    - {{ pin_compatible('csm', min_pin='x.x.x', max_pin='x.x.x') }}
 
 test:
   commands:
