@@ -12,6 +12,7 @@ source:
     patches:
       - patches/0001-Remove-stale-spdlog-install-reference.patch
       - patches/0002-Install-usgscsm-DLL-on-Windows.patch
+      - patches/0003-Properly-handle-linking-against-csmapi.patch
 
   # submodules
   - folder: ale
