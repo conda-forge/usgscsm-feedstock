@@ -1,18 +1,30 @@
 Install the usgscsm library on Windows.
 
-The install rule tags the usgscsm target with the LIBRARY keyword only.
-On Windows a shared library splits into a RUNTIME artifact (the .dll) and
-an ARCHIVE artifact (the import .lib); LIBRARY covers neither, so the
-install target places nothing for usgscsm and the package ships without
-usgscsm.dll. Add RUNTIME and ARCHIVE destinations so the install target
-works on Windows. On Unix only the LIBRARY line applies, so behavior there
-is unchanged.
+usgscsm_cam_test links against usgscsm, but the usgscsm target exported no
+symbols on Windows, so no import .lib was produced and the link failed.
+The build worked only because the previous bld.bat ignored that failure.
+Enable WINDOWS_EXPORT_ALL_SYMBOLS so the import library is generated.
+
+The install rule also tagged the usgscsm target with the LIBRARY keyword
+only. On Windows a shared library splits into a RUNTIME artifact (the .dll)
+and an ARCHIVE artifact (the import .lib); LIBRARY covers neither, so the
+install target placed nothing for usgscsm. Add RUNTIME and ARCHIVE
+destinations. On Unix only the LIBRARY line applies, so behavior there is
+unchanged.
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c469185..330026f 100644
+index c469185..235e79b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -748,7 +748,10 @@ target_link_libraries(usgscsm_cam_test
+@@ -712,6 +712,7 @@ endif(USGSCSM_EXTERNAL_DEPS)
+ set_target_properties(usgscsm PROPERTIES
+     VERSION ${PROJECT_VERSION}
+     SOVERSION 1
++    WINDOWS_EXPORT_ALL_SYMBOLS ON
+ )
+ set(USGSCSM_INCLUDE_DIRS "${USGSCSM_INCLUDE_DIRS}"
+                          "${EIGEN3_INCLUDE_DIR}"
+@@ -748,7 +749,10 @@ target_link_libraries(usgscsm_cam_test
      usgscsm
      ${CSM_LIBRARY})
  
