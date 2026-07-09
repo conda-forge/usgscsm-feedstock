@@ -11,6 +11,8 @@ source:
     sha256: 2e39b2762bcaf57539af3355b87c5d8bcd86d1399c9ab240e51aaa331f0e1ba8
     patches:
       - patches/0001-Remove-stale-spdlog-install-reference.patch
+      - patches/0002-Install-usgscsm-DLL-on-Windows.patch
+      - patches/0003-Properly-handle-linking-against-csmapi.patch
 
   # submodules
   - folder: ale
@@ -33,7 +35,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -45,13 +47,16 @@ requirements:
     # time. Needed for cross-compiled targets (e.g. osx_arm64) where the
     # host sqlite3 cannot run on the build machine.
     - sqlite 3.46.1
+    - csm
   host:
     - vc  # [win]
     - sqlite 3.46.1
+    - csm
 
   run:
     - vc  # [win]
     - sqlite 3.46.1
+    - {{ pin_compatible('csm', min_pin='x.x.x', max_pin='x.x.x') }}
 
 test:
   commands:
