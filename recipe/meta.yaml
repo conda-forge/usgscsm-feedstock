@@ -35,7 +35,7 @@ source:
     sha256: 5bb137beba7c28d46898d358fc74ef57d18a80f56066a51ee467d3b48e9d69fa
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -46,16 +46,16 @@ requirements:
     # Native sqlite3 CLI to generate the vendored PROJ proj.db at build
     # time. Needed for cross-compiled targets (e.g. osx_arm64) where the
     # host sqlite3 cannot run on the build machine.
-    - sqlite 3.46.1
+    - sqlite
     - csm
   host:
     - vc  # [win]
-    - sqlite 3.46.1
+    - sqlite
     - csm
 
   run:
     - vc  # [win]
-    - sqlite 3.46.1
+    - sqlite
     - {{ pin_compatible('csm', min_pin='x.x.x', max_pin='x.x.x') }}
 
 test:
